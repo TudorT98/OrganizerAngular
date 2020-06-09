@@ -1,0 +1,46 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name = "Id" [value] = "service.formData.Id">
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-user"></i> 
+                </div>
+            </div>
+            <input name = "FirstName" #FirstName = "ngModel" [(ngModel)]="service.formData.FirstName" class="form-control" placeholder="FirstName" required>
+        </div>     
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-user"></i> 
+                </div>
+            </div>
+            <input name = "LasttName" #LasttName = "ngModel" [(ngModel)]="service.formData.LasttName" class="form-control" placeholder="LasttName" required>
+        </div>     
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-user"></i> 
+                </div>
+            </div>
+            <input name = "UserName" #UserName = "ngModel" [(ngModel)]="service.formData.UserName" class="form-control" placeholder="UserName" required>
+        </div>     
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-user"></i> 
+                </div>
+            </div>
+            <input name = "Location" #Location = "ngModel" [(ngModel)]="service.formData.Location" class="form-control" placeholder="Location" required>
+        </div>     
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" type="submit" [disabled] = "form.invalid" ><i class="fas fa-save"></i> Submit </button>
+    </div>
+</form>
