@@ -12,7 +12,7 @@ export class UsersService {
     Id : null,
     FirstName: null,
     LasttName : null,
-    Position : null,
+    Location : null,
     program : null,
     UserName : null
   }
@@ -21,6 +21,16 @@ export class UsersService {
 
   postUser(formData:Users){
     return this.http.post(this.rootUrl + '/Users',formData);
+  }
+  getUsers()
+  {
+    return this.http.get(this.rootUrl + '/Users').toPromise().then(res => res as Users[]) 
+  }
+  getUserId(userName)
+  {
+    console.log(this.rootUrl + '/Users/UsersIdByUsername/' + userName)
+    return this.http.get(this.rootUrl + '/Users/UsersIdByUsername/' + userName).toPromise().then(res=> res as string)
+    
   }
 
   refreshList(){

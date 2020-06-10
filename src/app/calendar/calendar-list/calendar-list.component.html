@@ -1,0 +1,7 @@
+<h4>Registered Bookings</h4>
+<table class="table table-hover">
+    <tr *ngFor = "let b of service.list">
+        <td>{{b.day}}</td>
+        <td>{{b.UserId}}</td>
+    </tr>
+</table>

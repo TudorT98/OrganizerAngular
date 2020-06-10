@@ -10,7 +10,9 @@ import { UsersService } from './shared/users.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ScheduleComponent } from './calendar/schedule/schedule.component';
-import { ScheduleModel, ScheduleModule} from '@syncfusion/ej2-angular-schedule'
+import { ScheduleModel, ScheduleModule} from '@syncfusion/ej2-angular-schedule';
+import { CalendarDetailsComponent } from './calendar/calendar-details/calendar-details.component';
+import { CalendarListComponent } from './calendar/calendar-list/calendar-list.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { ScheduleModel, ScheduleModule} from '@syncfusion/ej2-angular-schedule'
     UserDetailsComponent,
     UsersListComponent,
     CalendarComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    CalendarDetailsComponent,
+    CalendarListComponent
   ],
   imports: [
     BrowserModule,
